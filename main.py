@@ -28,7 +28,7 @@ def classify_disease(model, features):
 
 # Step 3: Use HuggingFace to Generate a Descriptive Report
 def generate_descriptive_analysis(disease_label):
-    summarizer = pipeline("text2text-generation", model="google/flan-t5-xl")
+    summarizer = pipeline("text2text-generation", model="gpt2")
     prompt = f"""Generate a medical explanation for a diagnosis of {disease_label} based on cough audio analysis. 
     Include causes, symptoms, and possible treatments in layman's terms."""
     
